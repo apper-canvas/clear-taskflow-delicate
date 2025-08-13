@@ -224,7 +224,7 @@ const Dashboard = () => {
   const currentList = taskLists.find(list => list.Id === activeListId);
 
   return (
-    <div className="h-screen flex overflow-hidden bg-gradient-to-br from-white via-gray-50/30 to-indigo-50/20">
+<div className="h-screen flex overflow-hidden bg-gradient-to-br from-white via-gray-50/30 to-purple-50/20">
       {/* Sidebar */}
       <Sidebar
         isOpen={sidebarOpen}

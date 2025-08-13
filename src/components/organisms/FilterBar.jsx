@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Select from "@/components/atoms/Select";
 import Button from "@/components/atoms/Button";
-import ApperIcon from "@/components/ApperIcon";
+import ProviderIcon from "@/components/ProviderIcon";
 
 const FilterBar = ({ 
   filters, 
@@ -26,12 +26,12 @@ const FilterBar = ({
     >
       <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">
-          <ApperIcon name="Filter" size={18} className="text-gray-600" />
+<ProviderIcon name="Filter" size={18} className="text-gray-600" />
           <span className="text-sm font-medium text-gray-700 font-display">
             Filters
           </span>
           {hasActiveFilters && (
-            <span className="text-xs bg-gradient-to-r from-primary/10 to-indigo-100 text-primary px-2 py-1 rounded-full font-medium">
+<span className="text-xs bg-gradient-to-r from-primary/10 to-purple-100 text-primary px-2 py-1 rounded-full font-medium">
               {activeCount} active
             </span>
           )}
@@ -84,7 +84,7 @@ const FilterBar = ({
               onClick={onClearFilters}
               className="text-gray-600 hover:text-gray-900"
             >
-              <ApperIcon name="X" size={16} />
+<ProviderIcon name="X" size={16} />
               <span className="ml-1">Clear</span>
             </Button>
           )}

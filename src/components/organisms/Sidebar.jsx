@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ApperIcon from "@/components/ApperIcon";
+import ProviderIcon from "@/components/ProviderIcon";
 import TaskListItem from "@/components/molecules/TaskListItem";
 import Button from "@/components/atoms/Button";
 
@@ -26,7 +26,7 @@ const Sidebar = ({
             onClick={onAddList}
             className="text-gray-600"
           >
-            <ApperIcon name="Plus" size={16} />
+<ProviderIcon name="Plus" size={16} />
           </Button>
         </div>
       </div>
@@ -49,7 +49,7 @@ const Sidebar = ({
         <div className="bg-gradient-to-r from-surface to-white rounded-xl p-4 border border-gray-200/50 shadow-sm">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-to-r from-success/10 to-emerald-100 rounded-lg flex items-center justify-center">
-              <ApperIcon name="TrendingUp" size={20} className="text-success" />
+<ProviderIcon name="TrendingUp" size={20} className="text-success" />
             </div>
             <div>
               <p className="text-sm font-medium text-gray-900 font-display">
@@ -100,7 +100,7 @@ const Sidebar = ({
                 onClick={onClose}
                 className="text-gray-600"
               >
-                <ApperIcon name="X" size={18} />
+<ProviderIcon name="X" size={18} />
               </Button>
             </div>
 

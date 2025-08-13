@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { format } from "date-fns";
-import ApperIcon from "@/components/ApperIcon";
+import ProviderIcon from "@/components/ProviderIcon";
 import Button from "@/components/atoms/Button";
 import Input from "@/components/atoms/Input";
 import Select from "@/components/atoms/Select";
@@ -113,7 +113,7 @@ const TaskForm = ({
             onClick={onCancel}
             className="text-gray-500"
           >
-            <ApperIcon name="X" size={18} />
+<ProviderIcon name="X" size={18} />
           </Button>
         </div>
 

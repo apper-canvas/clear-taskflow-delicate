@@ -10,9 +10,9 @@ const Badge = ({
   const baseStyles = "inline-flex items-center font-medium rounded-full transition-all duration-200";
   
   const variants = {
-    primary: "bg-gradient-to-r from-primary/10 to-indigo-100 text-primary border border-primary/20",
+primary: "bg-gradient-to-r from-primary/10 to-purple-100 text-primary border border-primary/20",
     secondary: "bg-gradient-to-r from-secondary/10 to-purple-100 text-secondary border border-secondary/20",
-    accent: "bg-gradient-to-r from-accent/10 to-pink-100 text-accent border border-accent/20",
+    accent: "bg-gradient-to-r from-accent/10 to-purple-100 text-accent border border-accent/20",
     success: "bg-gradient-to-r from-success/10 to-emerald-100 text-success border border-success/20",
     warning: "bg-gradient-to-r from-warning/10 to-yellow-100 text-warning border border-warning/20",
     error: "bg-gradient-to-r from-error/10 to-red-100 text-error border border-error/20",

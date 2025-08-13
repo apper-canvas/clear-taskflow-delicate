@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { format, isToday, isPast, isTomorrow } from "date-fns";
 import { cn } from "@/utils/cn";
-import ApperIcon from "@/components/ApperIcon";
+import ProviderIcon from "@/components/ProviderIcon";
 import Checkbox from "@/components/atoms/Checkbox";
 import Button from "@/components/atoms/Button";
 import PriorityIndicator from "@/components/molecules/PriorityIndicator";
@@ -103,7 +103,7 @@ const TaskItem = ({ task, onToggleComplete, onEdit, onDelete }) => {
                 
                 {dueDateInfo && (
                   <Badge variant={dueDateInfo.variant} size="sm" className="flex items-center gap-1">
-                    <ApperIcon name={dueDateInfo.icon} size={12} />
+<ProviderIcon name={dueDateInfo.icon} size={12} />
                     {dueDateInfo.text}
                   </Badge>
                 )}
@@ -122,7 +122,7 @@ const TaskItem = ({ task, onToggleComplete, onEdit, onDelete }) => {
                 onClick={() => onEdit(task)}
                 className="text-gray-500 hover:text-gray-700"
               >
-                <ApperIcon name="Edit2" size={16} />
+<ProviderIcon name="Edit2" size={16} />
               </Button>
               
               <Button
@@ -131,7 +131,7 @@ const TaskItem = ({ task, onToggleComplete, onEdit, onDelete }) => {
                 onClick={() => onDelete(task.Id)}
                 className="text-gray-500 hover:text-error"
               >
-                <ApperIcon name="Trash2" size={16} />
+<ProviderIcon name="Trash2" size={16} />
               </Button>
             </div>
           </div>

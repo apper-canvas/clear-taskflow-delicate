@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import ApperIcon from "@/components/ApperIcon";
+import ProviderIcon from "@/components/ProviderIcon";
 import Button from "@/components/atoms/Button";
 import SearchBar from "@/components/molecules/SearchBar";
 
@@ -16,14 +16,14 @@ const Header = ({ onAddTask, onSearch, onToggleSidebar }) => {
             onClick={onToggleSidebar}
             className="lg:hidden p-2 rounded-lg hover:bg-gradient-to-r hover:from-gray-100 hover:to-gray-50 transition-all duration-200"
           >
-            <ApperIcon name="Menu" size={20} className="text-gray-600" />
+<ProviderIcon name="Menu" size={20} className="text-gray-600" />
           </button>
           
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-r from-primary to-indigo-600 rounded-lg flex items-center justify-center shadow-lg">
-              <ApperIcon name="CheckSquare" size={20} className="text-white" />
+<div className="w-8 h-8 bg-gradient-to-r from-primary to-purple-600 rounded-lg flex items-center justify-center shadow-lg">
+              <ProviderIcon name="CheckSquare" size={20} className="text-white" />
             </div>
-            <h1 className="text-2xl font-bold text-gray-900 font-display bg-gradient-to-r from-primary to-indigo-600 bg-clip-text text-transparent">
+<h1 className="text-2xl font-bold text-gray-900 font-display bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
               TaskFlow
             </h1>
           </div>
@@ -45,7 +45,7 @@ const Header = ({ onAddTask, onSearch, onToggleSidebar }) => {
               size="sm"
               onClick={() => setShowQuickAdd(!showQuickAdd)}
             >
-              <ApperIcon name="Search" size={18} />
+<ProviderIcon name="Search" size={18} />
             </Button>
           </div>
 
@@ -54,7 +54,7 @@ const Header = ({ onAddTask, onSearch, onToggleSidebar }) => {
             onClick={onAddTask}
             className="flex items-center gap-2"
           >
-            <ApperIcon name="Plus" size={18} />
+<ProviderIcon name="Plus" size={18} />
             <span className="hidden sm:inline">Add Task</span>
           </Button>
         </div>

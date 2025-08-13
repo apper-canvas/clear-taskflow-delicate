@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { cn } from "@/utils/cn";
-import ApperIcon from "@/components/ApperIcon";
+import ProviderIcon from "@/components/ProviderIcon";
 
 const Checkbox = forwardRef(({ 
   className, 
@@ -23,12 +23,12 @@ const Checkbox = forwardRef(({
         <div className={cn(
           "w-5 h-5 rounded-md border-2 transition-all duration-200 flex items-center justify-center",
           checked 
-            ? "bg-gradient-to-r from-primary to-indigo-600 border-primary shadow-md" 
+? "bg-gradient-to-r from-primary to-purple-600 border-primary shadow-md" 
             : "border-gray-300 bg-white hover:border-gray-400 group-hover:bg-gradient-to-r group-hover:from-gray-50 group-hover:to-white",
           className
         )}>
           {checked && (
-            <ApperIcon 
+<ProviderIcon
               name="Check" 
               size={14} 
               className="text-white animate-in zoom-in duration-200" 

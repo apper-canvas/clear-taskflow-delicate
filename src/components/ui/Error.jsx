@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ApperIcon from "@/components/ApperIcon";
+import ProviderIcon from "@/components/ProviderIcon";
 import Button from "@/components/atoms/Button";
 
 const Error = ({ 
@@ -13,7 +13,7 @@ const Error = ({
       className="bg-gradient-to-r from-error/5 to-red-50 rounded-2xl border border-error/20 p-8 text-center"
     >
       <div className="w-16 h-16 bg-gradient-to-r from-error/10 to-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-        <ApperIcon name="AlertTriangle" size={32} className="text-error" />
+<ProviderIcon name="AlertTriangle" size={32} className="text-error" />
       </div>
       
       <h3 className="text-lg font-semibold text-gray-900 mb-2 font-display">
@@ -30,7 +30,7 @@ const Error = ({
           variant="primary"
           className="flex items-center gap-2"
         >
-          <ApperIcon name="RefreshCw" size={18} />
+<ProviderIcon name="RefreshCw" size={18} />
           Try Again
         </Button>
       )}
