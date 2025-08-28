@@ -7,38 +7,37 @@ import SearchBar from "@/components/molecules/SearchBar";
 const Header = ({ onAddTask, onSearch, onToggleSidebar }) => {
   const [showQuickAdd, setShowQuickAdd] = useState(false);
 
-  return (
-    <header className="bg-white border-b border-gray-200 px-6 py-4 backdrop-blur-sm bg-white/95">
-      <div className="flex items-center justify-between">
-        {/* Left Section */}
-        <div className="flex items-center gap-4">
+return (
+    <header className="bg-white/95 backdrop-blur-md border-b border-gray-200/80 px-8 py-5 sticky top-0 z-50">
+      <div className="flex items-center justify-between max-w-7xl mx-auto">
+{/* Left Section */}
+        <div className="flex items-center gap-5">
           <button
             onClick={onToggleSidebar}
-            className="lg:hidden p-2 rounded-lg hover:bg-gradient-to-r hover:from-gray-100 hover:to-gray-50 transition-all duration-200"
+            className="lg:hidden p-2.5 rounded-xl hover:bg-gradient-to-r hover:from-gray-100 hover:to-gray-50 transition-all duration-300 hover:scale-105"
           >
 <ProviderIcon name="Menu" size={20} className="text-gray-600" />
           </button>
-          
-          <div className="flex items-center gap-3">
-<div className="w-8 h-8 bg-gradient-to-r from-primary to-purple-600 rounded-lg flex items-center justify-center shadow-lg">
-              <ProviderIcon name="CheckSquare" size={20} className="text-white" />
+<div className="flex items-center gap-4">
+            <div className="w-10 h-10 bg-gradient-to-r from-primary to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+              <ProviderIcon name="CheckSquare" size={22} className="text-white" />
             </div>
-<h1 className="text-2xl font-bold text-gray-900 font-display bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+<h1 className="text-3xl font-bold text-gray-900 font-display bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
               TaskFlow
             </h1>
           </div>
         </div>
-
-        {/* Center Section - Search */}
-        <div className="flex-1 max-w-md mx-8 hidden md:block">
+{/* Center Section - Search */}
+        <div className="flex-1 max-w-lg mx-10 hidden md:block">
           <SearchBar 
+            placeholder="Search tasks..."
             placeholder="Search tasks..."
             onSearch={onSearch}
           />
         </div>
 
-        {/* Right Section */}
-        <div className="flex items-center gap-3">
+{/* Right Section */}
+        <div className="flex items-center gap-4">
           <div className="md:hidden">
             <Button
               variant="ghost"

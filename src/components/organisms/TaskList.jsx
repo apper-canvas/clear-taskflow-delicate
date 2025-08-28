@@ -25,8 +25,8 @@ const TaskList = ({
     return <Empty />;
   }
 
-  return (
-    <div className="space-y-3">
+return (
+    <div className="space-y-4">
       <AnimatePresence mode="popLayout">
         {tasks.map((task) => (
           <motion.div
@@ -39,11 +39,12 @@ const TaskList = ({
               scale: 0.9,
               transition: { duration: 0.3 }
             }}
-            layout
+layout
             transition={{ 
               type: "spring", 
-              damping: 25, 
-              stiffness: 300 
+              damping: 30, 
+              stiffness: 400,
+              duration: 0.4
             }}
           >
             <TaskItem

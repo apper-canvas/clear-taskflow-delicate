@@ -65,25 +65,27 @@ const TaskItem = ({ task, onToggleComplete, onEdit, onDelete }) => {
   const dueDateInfo = getDueDateInfo(task.dueDate);
 
   return (
-    <motion.div
+<motion.div
       className={cn(
-        "group bg-white rounded-xl border border-gray-200 p-4 transition-all duration-200 hover:shadow-lg hover:border-gray-300 hover:scale-[1.01]",
+        "group bg-white rounded-xl border border-gray-200 p-5 transition-all duration-300 hover:shadow-xl hover:border-gray-300 hover:scale-[1.02] hover:-translate-y-1",
         task.completed && "opacity-75 bg-gradient-to-r from-gray-50 to-white",
         isCompleting && "animate-fly-up"
       )}
-      whileHover={{ y: -1 }}
+      whileHover={{ y: -2 }}
+      transition={{ type: "spring", damping: 25, stiffness: 300 }}
     >
-      <div className="flex items-start gap-4">
+<div className="flex items-start gap-5">
         {/* Checkbox */}
+        <div className="flex-shrink-0 pt-1.5">
         <div className="flex-shrink-0 pt-1">
           <Checkbox
-            checked={task.completed}
-            onChange={handleToggleComplete}
+onChange={handleToggleComplete}
             className={cn(
-              "transition-all duration-300",
+              "transition-all duration-300 hover:scale-110",
               isCompleting && "animate-pulse"
             )}
           />
+        </div>
         </div>
 
         {/* Task Content */}
@@ -96,11 +98,9 @@ const TaskItem = ({ task, onToggleComplete, onEdit, onDelete }) => {
               )}>
                 {task.title}
               </h3>
-              
-              {/* Task Meta */}
-              <div className="flex items-center gap-3 mt-2">
+{/* Task Meta */}
+              <div className="flex items-center gap-4 mt-3">
                 <PriorityIndicator priority={task.priority} />
-                
                 {dueDateInfo && (
                   <Badge variant={dueDateInfo.variant} size="sm" className="flex items-center gap-1">
 <ProviderIcon name={dueDateInfo.icon} size={12} />
@@ -114,8 +114,8 @@ const TaskItem = ({ task, onToggleComplete, onEdit, onDelete }) => {
               </div>
             </div>
 
-            {/* Actions */}
-            <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+{/* Actions */}
+            <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
               <Button
                 variant="ghost"
                 size="sm"
@@ -139,19 +139,21 @@ const TaskItem = ({ task, onToggleComplete, onEdit, onDelete }) => {
       </div>
 
       {/* Completion Celebration */}
-      {isCompleting && (
+{isCompleting && (
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
+          transition={{ type: "spring", damping: 20, stiffness: 300 }}
           className="absolute inset-0 flex items-center justify-center pointer-events-none"
         >
-          <motion.div
+<motion.div
             animate={{ 
               rotate: 360,
-              scale: [1, 1.2, 1]
+              scale: [1, 1.3, 1]
             }}
             transition={{ 
-              duration: 0.6,
+              type: "spring",
+              duration: 0.8,
               repeat: 1
             }}
             className="text-4xl"

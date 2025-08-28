@@ -223,8 +223,8 @@ const Dashboard = () => {
 
   const currentList = taskLists.find(list => list.Id === activeListId);
 
-  return (
-<div className="h-screen flex overflow-hidden bg-gradient-to-br from-white via-gray-50/30 to-purple-50/20">
+return (
+    <div className="h-screen flex overflow-hidden bg-gradient-to-br from-white via-gray-50/50 to-purple-50/30">
       {/* Sidebar */}
       <Sidebar
         isOpen={sidebarOpen}
@@ -243,19 +243,19 @@ const Dashboard = () => {
           onSearch={setSearchQuery}
           onToggleSidebar={() => setSidebarOpen(true)}
         />
-
-        <main className="flex-1 overflow-y-auto p-6">
-          <div className="max-w-4xl mx-auto">
+<main className="flex-1 overflow-y-auto p-8">
+          <div className="max-w-5xl mx-auto space-y-8">
             {/* Page Header */}
-            <motion.div
+<motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mb-8"
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="mb-10"
             >
-              <h1 className="text-3xl font-bold text-gray-900 mb-2 font-display">
+              <h1 className="text-4xl font-bold text-gray-900 mb-3 font-display leading-tight">
                 {currentList?.name || "All Tasks"}
               </h1>
-              <p className="text-gray-600 font-body">
+              <p className="text-gray-600 font-body text-lg">
                 {filteredTasks.length > 0 
                   ? `${filteredTasks.filter(t => !t.completed).length} pending, ${filteredTasks.filter(t => t.completed).length} completed`
                   : "No tasks to show"
