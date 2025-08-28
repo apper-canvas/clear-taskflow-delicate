@@ -28,9 +28,8 @@ return (
           </div>
         </div>
 {/* Center Section - Search */}
-        <div className="flex-1 max-w-lg mx-10 hidden md:block">
+<div className="flex-1 max-w-lg mx-10 hidden md:block">
           <SearchBar 
-            placeholder="Search tasks..."
             placeholder="Search tasks..."
             onSearch={onSearch}
           />
